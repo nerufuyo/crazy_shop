@@ -1,5 +1,6 @@
 import 'package:crazy_shop/common/custom_style.dart';
 import 'package:crazy_shop/presentation/pages/profile_page.dart';
+import 'package:crazy_shop/presentation/pages/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 
@@ -11,7 +12,7 @@ class MainPage extends StatefulWidget {
   State<MainPage> createState() => _MainPageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
   int _selectedIndex = 0;
   static const List _widgetOptions = [
     Text('Index 1: Home Page'),
@@ -36,22 +37,24 @@ class _MainPageState extends State<MainPage> {
         appBar: AppBar(
           elevation: 0,
           backgroundColor: whiteColor,
-          title: InkWell(
-            onTap: () {},
-            child: SizedBox(
-              height: 36,
-              child: TextField(
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: grayColor.withOpacity(.2),
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8.0),
-                      borderSide: BorderSide.none),
-                  contentPadding: const EdgeInsets.all(4),
-                  hintText: 'Search many things',
-                  prefixIcon: const Icon(EvaIcons.searchOutline, size: 20),
-                  prefixIconColor: blackColor,
-                ),
+          title: SizedBox(
+            height: 36,
+            child: TextField(
+              autofocus: false,
+              onTap: () {
+                Navigator.pushNamed(context, SearchPage.routeName);
+                FocusScope.of(context).requestFocus(FocusNode());
+              },
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: grayColor.withOpacity(.2),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                    borderSide: BorderSide.none),
+                contentPadding: const EdgeInsets.all(4),
+                hintText: 'Search many things',
+                prefixIcon: const Icon(EvaIcons.searchOutline, size: 20),
+                prefixIconColor: blackColor,
               ),
             ),
           ),
@@ -78,7 +81,7 @@ class _MainPageState extends State<MainPage> {
                     Navigator.pushNamed(context, ProfilePage.routeName);
                   },
                   icon: const Icon(
-                    EvaIcons.menu2Outline,
+                    EvaIcons.menu,
                     color: blackColor,
                   ),
                 ),

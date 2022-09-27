@@ -1,6 +1,7 @@
 import 'package:crazy_shop/common/custom_style.dart';
 import 'package:crazy_shop/presentation/pages/main_page.dart';
 import 'package:crazy_shop/presentation/pages/profile_page.dart';
+import 'package:crazy_shop/presentation/pages/search_page.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
@@ -24,6 +25,8 @@ class MyApp extends StatelessWidget {
         switch (settings.name) {
           case MainPage.routeName:
             return MaterialPageRoute(builder: (_) => const MainPage());
+          case SearchPage.routeName:
+            return MaterialPageRoute(builder: (_) => const SearchPage());
           case ProfilePage.routeName:
             return MaterialPageRoute(builder: (_) => const ProfilePage());
           default:
