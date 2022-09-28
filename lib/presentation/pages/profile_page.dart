@@ -48,7 +48,7 @@ class ProfilePage extends StatelessWidget {
               ],
             ),
           ),
-          const ContentGap20(),
+          const ContentGap30(),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: InkWell(
@@ -81,7 +81,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
           ),
-          const ContentGap20(),
+          const ContentGap30(),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
@@ -89,7 +89,7 @@ class ProfilePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('Activity', style: bigBlack),
-                const ContentGap10(),
+                const ContentGap20(),
                 Container(
                   width: MediaQuery.of(context).size.width,
                   padding: const EdgeInsets.symmetric(vertical: 8),
@@ -140,7 +140,7 @@ class ProfilePage extends StatelessWidget {
               ],
             ),
           ),
-          const ContentGap20(),
+          const ContentGap30(),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
@@ -148,7 +148,7 @@ class ProfilePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('Account Settings', style: bigBlack),
-                const ContentGap10(),
+                const ContentGap20(),
                 InkWell(
                   onTap: () {},
                   child: Row(children: [
@@ -164,7 +164,7 @@ class ProfilePage extends StatelessWidget {
                     )
                   ]),
                 ),
-                const ContentGap10(),
+                const ContentGap20(),
                 InkWell(
                   onTap: () {},
                   child: Row(children: [
@@ -180,7 +180,7 @@ class ProfilePage extends StatelessWidget {
                     )
                   ]),
                 ),
-                const ContentGap10(),
+                const ContentGap20(),
                 InkWell(
                   onTap: () {},
                   child: Row(children: [
@@ -197,7 +197,7 @@ class ProfilePage extends StatelessWidget {
                     )
                   ]),
                 ),
-                const ContentGap10(),
+                const ContentGap20(),
                 InkWell(
                   onTap: () {},
                   child: Row(children: [
@@ -216,10 +216,12 @@ class ProfilePage extends StatelessWidget {
               ],
             ),
           ),
-          const ContentGap20(),
+          const ContentGap30(),
           ExpansionTile(
             title: Text('Application Settings', style: bigBlack),
+            tilePadding: const EdgeInsets.symmetric(horizontal: 20),
             children: [
+              const ContentGap20(),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: InkWell(
@@ -271,23 +273,25 @@ class ProfilePage extends StatelessWidget {
                   ]),
                 ),
               ),
+              const ContentGap20(),
             ],
           ),
-          const ContentGap20(),
+          const ContentGap30(),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: InkWell(
               onTap: () {},
               child: Row(
                 children: [
-                  const Icon(EvaIcons.arrowCircleRightOutline,
-                      color: blackColor, size: 24),
+                  const Icon(EvaIcons.logOutOutline,
+                      color: blackColor, size: 28),
                   const ContentGap5(),
                   Text('Log Out', style: mediumBlack)
                 ],
               ),
             ),
-          )
+          ),
+          const ContentGap30(),
         ]),
       ),
     );

@@ -37,6 +37,17 @@ class ContentGap20 extends StatelessWidget {
   }
 }
 
+class ContentGap30 extends StatelessWidget {
+  const ContentGap30({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const SizedBox(height: 30);
+  }
+}
+
 // Separator
 class SeparatorVerticalBox extends StatelessWidget {
   const SeparatorVerticalBox({
