@@ -10,6 +10,7 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade300,
       appBar: AppBar(
         backgroundColor: whiteColor,
         elevation: 0,
@@ -18,7 +19,7 @@ class ProfilePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(children: [
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,7 +49,7 @@ class ProfilePage extends StatelessWidget {
               ],
             ),
           ),
-          const ContentGap30(),
+          const ContentGap10(),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: InkWell(
@@ -81,7 +82,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
           ),
-          const ContentGap30(),
+          const ContentGap20(),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
@@ -89,7 +90,7 @@ class ProfilePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('Activity', style: bigBlack),
-                const ContentGap20(),
+                const ContentGap10(),
                 Container(
                   width: MediaQuery.of(context).size.width,
                   padding: const EdgeInsets.symmetric(vertical: 8),
@@ -140,9 +141,10 @@ class ProfilePage extends StatelessWidget {
               ],
             ),
           ),
-          const ContentGap30(),
+          const ContentGap20(),
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            decoration: const BoxDecoration(color: whiteColor),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -154,12 +156,13 @@ class ProfilePage extends StatelessWidget {
                   child: Row(children: [
                     const Icon(EvaIcons.mapOutline,
                         size: 28, color: blackColor),
-                    const ContentGap5(),
+                    const ContentGap10H(),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text('Address List', style: mediumBlack),
-                        Text('Settings address for shopping', style: smallBlack)
+                        Text('Settings address for shopping',
+                            style: superSmallBlack)
                       ],
                     )
                   ]),
@@ -170,12 +173,13 @@ class ProfilePage extends StatelessWidget {
                   child: Row(children: [
                     const Icon(EvaIcons.smartphoneOutline,
                         size: 28, color: blackColor),
-                    const ContentGap5(),
+                    const ContentGap10H(),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text('Payment', style: mediumBlack),
-                        Text('E-Wallet, credit & debit card', style: smallBlack)
+                        Text('E-Wallet, credit & debit card',
+                            style: superSmallBlack)
                       ],
                     )
                   ]),
@@ -186,13 +190,13 @@ class ProfilePage extends StatelessWidget {
                   child: Row(children: [
                     const Icon(EvaIcons.lockOutline,
                         size: 28, color: blackColor),
-                    const ContentGap5(),
+                    const ContentGap10H(),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text('Account Security', style: mediumBlack),
                         Text('Password, PIN and personal data verification',
-                            style: smallBlack)
+                            style: superSmallBlack)
                       ],
                     )
                   ]),
@@ -203,12 +207,13 @@ class ProfilePage extends StatelessWidget {
                   child: Row(children: [
                     const Icon(EvaIcons.bellOutline,
                         size: 28, color: blackColor),
-                    const ContentGap5(),
+                    const ContentGap10H(),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text('Notification', style: mediumBlack),
-                        Text('Settings all notification', style: smallBlack)
+                        Text('Settings all notification',
+                            style: superSmallBlack)
                       ],
                     )
                   ]),
@@ -216,8 +221,10 @@ class ProfilePage extends StatelessWidget {
               ],
             ),
           ),
-          const ContentGap30(),
+          const ContentGap10(),
           ExpansionTile(
+            backgroundColor: whiteColor,
+            collapsedBackgroundColor: whiteColor,
             title: Text('Application Settings', style: bigBlack),
             tilePadding: const EdgeInsets.symmetric(horizontal: 20),
             children: [
@@ -229,7 +236,7 @@ class ProfilePage extends StatelessWidget {
                   child: Row(children: [
                     const Icon(EvaIcons.clipboardOutline,
                         color: blackColor, size: 28),
-                    const ContentGap5(),
+                    const ContentGap10H(),
                     Text('Terms and Conditions', style: mediumBlack)
                   ]),
                 ),
@@ -242,7 +249,7 @@ class ProfilePage extends StatelessWidget {
                   child: Row(children: [
                     const Icon(EvaIcons.shieldOutline,
                         color: blackColor, size: 28),
-                    const ContentGap5(),
+                    const ContentGap10H(),
                     Text('Privacy Policy', style: mediumBlack)
                   ]),
                 ),
@@ -255,7 +262,7 @@ class ProfilePage extends StatelessWidget {
                   child: Row(children: [
                     const Icon(EvaIcons.bulbOutline,
                         color: blackColor, size: 28),
-                    const ContentGap5(),
+                    const ContentGap10H(),
                     Text('Intellectual Property Rights', style: mediumBlack)
                   ]),
                 ),
@@ -268,30 +275,31 @@ class ProfilePage extends StatelessWidget {
                   child: Row(children: [
                     const Icon(EvaIcons.starOutline,
                         color: blackColor, size: 28),
-                    const ContentGap5(),
+                    const ContentGap10H(),
                     Text('Review This App', style: mediumBlack)
                   ]),
                 ),
               ),
-              const ContentGap20(),
+              const ContentGap20()
             ],
           ),
-          const ContentGap30(),
+          const ContentGap10(),
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            decoration: const BoxDecoration(color: whiteColor),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
             child: InkWell(
               onTap: () {},
               child: Row(
                 children: [
                   const Icon(EvaIcons.logOutOutline,
                       color: blackColor, size: 28),
-                  const ContentGap5(),
+                  const ContentGap10H(),
                   Text('Log Out', style: mediumBlack)
                 ],
               ),
             ),
           ),
-          const ContentGap30(),
+          const ContentGap10(),
         ]),
       ),
     );

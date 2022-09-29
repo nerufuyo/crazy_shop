@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // Color Pallet
-const Color whiteColor = Color(0xFFEEEEEE);
+const Color whiteColor = Color(0xFFFFFFFF);
 const Color greenColor = Color(0xFF169959);
 const Color blackColor = Color(0xFF222831);
 const Color grayColor = Color(0xFF92979E);
