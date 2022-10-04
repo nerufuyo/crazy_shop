@@ -57,6 +57,7 @@ class CardWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('Rp. 20.400', style: mediumBlack),
+                const ContentGap5(),
                 Row(
                   children: [
                     Container(

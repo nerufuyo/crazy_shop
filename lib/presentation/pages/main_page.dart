@@ -2,6 +2,7 @@ import 'package:crazy_shop/common/custom_style.dart';
 import 'package:crazy_shop/presentation/pages/feed_page.dart';
 import 'package:crazy_shop/presentation/pages/profile_page.dart';
 import 'package:crazy_shop/presentation/pages/search_page.dart';
+import 'package:crazy_shop/presentation/pages/wishlist_page.dart';
 import 'package:flutter/material.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 
@@ -19,7 +20,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
     Text('Index 1: Home Page'),
     FeedPage(),
     Text('Index 3: Inbox Page'),
-    Text('Index 4: Whislist Page'),
+    WishlistPage(),
     Text('Index 5: Transaction Page')
   ];
 

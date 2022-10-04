@@ -3,6 +3,7 @@ import 'package:crazy_shop/presentation/pages/feed_page.dart';
 import 'package:crazy_shop/presentation/pages/main_page.dart';
 import 'package:crazy_shop/presentation/pages/profile_page.dart';
 import 'package:crazy_shop/presentation/pages/search_page.dart';
+import 'package:crazy_shop/presentation/pages/wishlist_page.dart';
 import 'package:crazy_shop/presentation/widgets/feed/all_tab_widget.dart';
 import 'package:crazy_shop/presentation/widgets/search/search_result_page.dart';
 import 'package:flutter/material.dart';
@@ -36,6 +37,8 @@ class MyApp extends StatelessWidget {
             return MaterialPageRoute(builder: (_) => const FeedPage());
           case FeedAllTabWidget.routeName:
             return MaterialPageRoute(builder: (_) => const FeedAllTabWidget());
+          case WishlistPage.routeName:
+            return MaterialPageRoute(builder: (_) => const WishlistPage());
           case ProfilePage.routeName:
             return MaterialPageRoute(builder: (_) => const ProfilePage());
           default:
